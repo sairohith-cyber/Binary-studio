@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Binary Cipher Studio</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="binary-animation" id="binaryBg"></div>
+    <div class="notification" id="notification">Copied to clipboard!</div>
+
+    <div class="container">
+        <header>
+            <h1>🔐 Binary Cipher Studio</h1>
+            <p class="subtitle">Secure binary encryption with password protection</p>
+        </header>
+
+        <div class="mode-switcher">
+            <button class="mode-btn active" onclick="setMode('encode')">🔒 Encrypt Message</button>
+            <button class="mode-btn" onclick="setMode('decode')">🔓 Decrypt Message</button>
+        </div>
+
+        <div class="converter-section">
+            <div class="info-box" id="infoBox">
+                <span id="infoText">
+                    🛡️ Enter your message and a password to create an encrypted binary code.
+                </span>
+            </div>
+
+            <div class="input-group">
+                <label id="inputLabel">Enter Your Message</label>
+                <textarea id="inputText" placeholder="Type your secret message here..."></textarea>
+            </div>
+
+            <div class="input-group">
+                <label id="passwordLabel">🔑 Encryption Password</label>
+                <div class="password-group">
+                    <input type="password" id="password" placeholder="Enter a secure password...">
+                    <button class="toggle-password" onclick="togglePassword()">👁️ Show</button>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button class="convert-btn" onclick="convert()">
+                    <span id="convertBtnText">🔒 Encrypt</span>
+                </button>
+                <button class="copy-btn" onclick="copyOutput()">📋 Copy Output</button>
+                <button class="clear-btn" onclick="clearAll()">🗑️ Clear All</button>
+            </div>
+
+            <div class="input-group">
+                <label>Output</label>
+                <div class="output-display" id="output">
+                    Your encrypted/decrypted result will appear here...
+                </div>
+            </div>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-value" id="charCount">0</div>
+                    <div class="stat-label">Characters</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="binaryCount">0</div>
+                    <div class="stat-label">Binary Digits</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="strength">None</div>
+                    <div class="stat-label">Security Level</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JS -->
+    <script src="script.js"></script>
+</body>
+</html>
