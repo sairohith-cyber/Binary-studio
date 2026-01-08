@@ -1,4 +1,4 @@
-**Binary Studio**
+**Binary Studio** - Task-1 by **Nativeva Learning Platform**
 
 Text to Binary and Binary to Text with password converter
 
